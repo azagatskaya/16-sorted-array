@@ -18,11 +18,10 @@ function sumInput() {
 			console.log(arr);
 		} else if (isFinite(newValue)) {
 			arr.push(newValue);
-			continue;
 		}
 	}
 	document.querySelector(".result").innerHTML = (`Массив: <br>${arr} <br>Сумма: ${res}`);
-	return res;
+	// return res;
 }
 
 // - 1. Дан массив `['js', 'css', 'html']`. Выведите на экран первый элемент.
@@ -37,7 +36,8 @@ console.log(techs[0]);
 
 // №2
 let diffTypesArr = [0, 1, false, 2, undefined, '', 3, null];
-let numbersArr = diffTypesArr.filter((el) => Number(el) > 0 );
+let numbersArr = diffTypesArr.filter((el) => !!(el));
+// let numbersArr = diffTypesArr.filter((el) => Number(el) > 0);
 console.log(numbersArr);
 
 // №3
